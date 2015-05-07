@@ -1,0 +1,6 @@
+= form_for @comment, remote: true do |f|
+  %div= f.label :body, 'Enter your comment:'
+  %div= f.text_area :body,rows: 3, required: true, maxlength: 2000
+  %div
+    %small Cannot be blank or contain more than 2000 symbols.
+  = f.submit 'Post'

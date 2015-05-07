@@ -1,0 +1,10 @@
+- if current_user
+  %p.notice= notice
+  %p.alert= alert
+  %h1 Join the discussion
+  #comments.bradius.shadow
+    = render 'form'
+    %ul.media-list
+      = render @comments
+- else
+  = render 'welcome'

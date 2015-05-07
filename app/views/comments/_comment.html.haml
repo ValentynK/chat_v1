@@ -1,0 +1,10 @@
+.wrapper
+  .comments-content
+    %li.med.comment{"data-id" => comment.id}
+      %h4
+        = mail_to comment.user.email
+        says
+        %small
+          [at #{comment.created_at.strftime('%-d %B %Y, %H:%M:%S')}]
+      %p.comment-body= comment.body
+    /
